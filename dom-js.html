@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+</head>
+<body>
+
+<h2>DOM Test</h2>
+
+
+<h3>Display the date:</h3>
+<p id="date"></p>
+<!-- changes the content of the element with id -->
+<button type="button"
+        onclick="document.getElementById('date').innerHTML = Date()">
+  click it
+</button>
+<!-- changes the content of its own element -->
+<button onclick="this.innerHTML = Date()">click it</button>
+
+
+<h3>Change HTML content:</h3>
+<p id="text">Text</p>
+<button type="button"
+        onclick='document.getElementById("text").innerHTML = "Changed text"'>
+  click it
+</button>
+
+
+<h3>Change HTML attribute:</h3>
+<img id="image"
+     src="images/pexels-photo-355952.jpeg"
+     width="500"
+     height="348"
+     alt="image" />
+<div>
+  <button type="button"
+          onclick="document.getElementById('image').src=
+          'images/pencil-typography-black-design.jpg'">
+    next
+  </button>
+  <button type="button"
+          onclick="document.getElementById('image').src=
+          'images/pexels-photo-355952.jpeg'">
+    prev
+  </button>
+</div>
+
+
+<h3>Change CSS:</h3>
+<p id="change-style">Text</p>
+<button type="button"
+        onclick="document.getElementById('change-style').style.fontSize='35px'">
+  click it
+</button>
+
+
+<h3>Hide/show element:</h3>
+<p id="dom-el">DOM element</p>
+<button type="button"
+        onclick="document.getElementById('dom-el').style.display='none'">
+  hide
+</button>
+<button type="button"
+        onclick="document.getElementById('dom-el').style.display='block'">
+  show
+</button>
+
+
+<h3>Print the current page</h3>
+<button onclick="window.print()">print</button>
+
+
+<h3>Functions:</h3>
+<p id="sum-nums"></p>
+<script>
+  function sumNumbers(a, b) {
+    return a + b;
+  }
+  
+  console.log('The result is: ' + sumNumbers(1, 2));
+</script>
+<button type="button"
+        onclick="document.getElementById('sum-nums').innerHTML=sumNumbers(1,2)">
+  result
+</button>
+
+
+<h3>JS display:</h3>
+<script>
+  alert('Text');
+  console.log('Text');
+  document.write(5 + 6);
+</script>
+
+</body>
+</html>
