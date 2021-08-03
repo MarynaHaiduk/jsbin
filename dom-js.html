@@ -93,5 +93,20 @@
   document.write(5 + 6);
 </script>
 
+
+<h3>Create List</h3>
+<p id="list"></p>
+
+<script>
+  let header = "List";
+  let tags = ["HTML", "CSS", "JavaScript"];
+  let list = `<h4>${header}:</h4><ul>`;
+  for (let item of tags) {
+    list += `<li>${item}</li>`;
+  }
+  list += `</ul>`;
+  document.getElementById("list").innerHTML = list;
+</script>
+
 </body>
 </html>
