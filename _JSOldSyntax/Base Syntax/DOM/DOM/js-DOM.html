@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JS DOM Templates</title>
+</head>
+
+<body>
+<h1>JS DOM Templates</h1>
+
+<h2 class="subtitle">Second</h2>
+<h2 class="subtitle">One more title</h2>
+<h2 id="idH2" class="h2-main main-title">One more title<span>from h2</span></h2>
+
+<button onclick="plusOne()">Increase</button>
+<button onclick="minusOne()">Decrease</button>
+
+<script>
+  
+  const titles = document.getElementsByTagName('h2');
+  
+  console.log(titles);  // HTMLCollection(2) [h2, h2]
+  console.log(titles[0]); // <h2>Second</h2>
+  
+  for (let i = 0; i < titles.length; i++) {
+    console.log(titles[i]);
+  }
+  // <h2>Second</h2> <h2>One more title</h2>
+  
+  // Convert HTML collection to array. Solution 1
+  console.log([...titles]);
+  
+  // Convert HTML collection to array. Solution 2
+  console.log(Array.from(titles));
+  
+  // Создание псевдомассива
+  const arr = Array.from(titles);
+  console.log(arr);
+  
+  // В консоли разработчика
+  // const allh2 = document.getElementByTagName('h2');
+  // [...allh2].map(el => el.innerText) // выведет массив значений тегов h2
+  
+  // Обращение через id
+  const idH2 = document.getElementById("idH2");
+  console.log(idH2);  // <h2 id="idH2">One more title<span>from h2</span></h2>
+  console.log(idH2.innerText);  // One more titlefrom h2
+  console.log(idH2.innerHTML);  // One more title<span>from h2</span>
+  
+  // Обращение через class
+  const subTitles = document.getElementsByClassName('subtitle');
+  console.log(subTitles);  // HTMLCollection(2) [h2.subtitle, h2.subtitle]
+</script>
+
+</body>
+</html>

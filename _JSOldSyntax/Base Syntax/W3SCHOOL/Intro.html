@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<h3>Javascript W3School Tutorial</h3>
+	<script>
+	//comment
+	/*multi-line comment*/	
+	
+	
+	// ---------- VARIABLES ----------
+	//JavaScript variables are containers for storing data values.
+	// First must be letter, number, underscore or $. Case sensitive!!!
+	var myString = "String"; //var - create variable
+	var myNumber = 10;
+	var a, b, c;   //type undefined
+	a = 5; b = 57; c = a + b;
+	var person = "John Doe", carName = "Volvo", price = 200;
+	myNumber = 100;  // Variables don't have a defined type, which can cause problems
+	var carName = "Volvo"; 
+	var carName;  //Re-declaring the variable left previous value
+	var x = 5 + 2 + 3;
+	var x = "John" + " " + "Doe";
+	var x = "5" + 2 + 3; //523 - strings concatenations
+	var x = 2 + 3 + "5"; //55
+	var txt1 = "John"; var txt2 = "Doe"; var txt3 = txt1 + " " + txt2;
+	var txt1 = "What a very "; txt1 += "nice day"; // What a very nice day
+	document.getElementById("demo3").innerHTML = myNumber;
+	// typeof	Returns the type of a variable
+	// instanceof	Returns true if an object is an instance of an object type
+
+<!--METHOD getElementById()-->
+	<p id='one'></p>
+	<button type="button" onclick='document.getElementById("one").innerHTML = Date()'>Date and Time</button>
+	<p id='two'>Hello</p>
+	<button type="button" onclick='document.getElementById("two").innerHTML = "Hello JavaScript"'>Click Me</button>
+
+	<button type="button" onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn On</button>
+	<img id="myImage" src="pic_bulboff.gif" style="width: 100px;">
+	<button type="button" onclick="document.getElementById('myImage').src='pic_bulboff.gif' ">Turn Off</button>
+
+	<p id='three'>HHHHHH</p>
+	<button type="button" onclick="document.getElementById('three').style.fontSize = '35px' ">Change text size</button>
+
+	<p id='hide'>JavaScript can hide HTML elements.</p>
+	<button type="button" onclick="document.getElementById('hide').style.display = 'none' ">Hide</button>
+	<button type="button" onclick="document.getElementById('hide').style.display = 'block'">Show hidden</button>
+
+
+<!---Display Using innerHTML-->
+	<p id="inner"></p>
+	<script>
+		document.getElementById("inner").innerHTML = 5 + 6;
+	</script>
+<!--Display Using document.write()-->
+	<script>
+		document.write(5 + 55555); 
+	</script>
+	<!--Using document.write() after HTML will delete all existing HTML:-->
+	<!--<button type="button" onclick="document.write(5 + 6)">Try it</button>-->
+<!--Display Using window.alert()-->
+	<script>
+		//window.alert(5 + 5);
+	</script>
+<!--Display Using window.alert()-->
+	<script>
+		//console.log(5 + 5);
+	</script>
+
+	
+<!--FUNCTIONS-->
+	<button type="button" onclick="myFunction()">Ask me</button>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<script>
+	function myFunction() {
+	  document.getElementById("demo1").innerHTML = "Hi!!!";
+	  document.getElementById("demo2").innerHTML = "How are you?";
+	}
+	</script>
+
+	
+<!---EXTERNAL Javascript2 reference-->
+	<!--<script src="myScript.js"></script>-->
+
+</body>
+</html> 

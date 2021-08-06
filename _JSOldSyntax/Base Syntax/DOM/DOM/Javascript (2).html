@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>My First JavaScript</h2>
+<p id="demo">Hello</p>
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+
+<h2>JavaScript Can Change HTML Content</h2>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+
+<h2>JavaScript Can Change HTML Attribute Values</h2>
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+<h1>Writing into an HTML element, using innerHTML</h1>
+<p id="demo2"></p>
+<script>document.getElementById("demo2").innerHTML = 5 + 6;</script>
+
+<h1>Writing into the HTML output using document.write()</h1>
+<p>Never call document.write after the document has finished loading.It will overwrite the whole document!!!</p>
+<script>document.write(5 + 6);</script>
+<p>Using document.write() after an HTML document is loaded, will delete all existing HTML. The document.write() method should only be used for testing!!!</p>
+<!--<button type="button" onclick="document.write(5 + 6)">Try it</button>-->
+
+<h1>Writing into an alert box, using window.alert()</h1>
+<!--<script>window.alert(5 + 6);</script>-->
+
+<h1>For debugging purposes, you can use the console.log() method to display data</h1>
+<!--<script>console.log(5 + 6);</script>-->
+
+<h2>JavaScript Statements</h2>
+<p id="demo3"></p>
+<script>
+var x, y, z;  // Statement 1
+x = 5;        // Statement 2
+y = 6;        // Statement 3
+z = x + y;    // Statement 4
+document.getElementById("demo3").innerHTML ="The value of z is " + z + ".";  
+</script>
+
+<h2>JavaScript Code Blocks</h2>
+<p>JavaScript code blocks are written between { and }</p>
+<button type="button" onclick="myFunction()">Click Me!</button>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<script>
+// Just a comment
+function myFunction() {
+    document.getElementById("demo4").innerHTML = "Hello Dolly!";
+    document.getElementById("demo5").innerHTML = "How are you?";
+}
+/* A comment too */
+</script>
+
+<h2>JavaScript Variables</h2>
+<p>Strings are written with quotes.</p>
+<p>Numbers are written without quotes.</p>
+
+<script>
+<p id="demo"></p>
+<script>
+var pi = 3.14;
+var person = "John Doe", carName = "Volvo", price = 200;
+var answer = 'Yes I am!';
+var x = 10; x += 5;
+var y = "5" + 5;  //55
+var x = 5; x++; var z = x; //6
+var x = 5; x--; var z = x; //4
+var x = 5; var z = x ** 2;   // result is 25
+var x = 5; var z = Math.pow(x,2); // result is 25
+var x = 10; x /= 5; //2
+var x = 16 + "Volvo"; //When adding a number and a string, JavaScript will treat the number as a string.
+var x = "Volvo" + 16 + 4; //Volvo164 JavaScript evaluates expressions from left to right. Different sequences can produce different results:
+var x = 16 + 4 + "Volvo"; //20Volvo
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+document.getElementById("demo").innerHTML = pi + "<br>" + person + "<br>" + answer;
+</script>
+
+<p>A variable declared without a value will have the value undefined.</p>
+<p id="demo7"></p>
+<script>
+var carName;
+document.getElementById("demo").innerHTML = carName;
+</script>
+
+<p>If you re-declare a JavaScript variable, it will not lose its value.</p>
+<p id="demo"></p>
+<script>
+var carName = "Volvo"; var carName;
+document.getElementById("demo").innerHTML = carName;
+</script>
+
+<p>The result of adding "5" + 2 + 3:</p>
+<p id="demo"></p>
+<script>
+x = "5" + 2 + 3;
+document.getElementById("demo").innerHTML = x;  //523
+</script>
+
+<p>The result of adding 2 + 3 + "5":</p>
+<p id="demo"></p>
+<script>
+var x = 2 + 3 + "5"
+document.getElementById("demo").innerHTML = x; //55
+</script>
+
+<script>
+var x = 5 + 5; var y = "5" + 5; var z = "Hello" + 5;
+document.getElementById("demo").innerHTML = x + "<br>" + y + "<br>" + z;
+</script>
+
+<p>Booleans can have two values: true or false:</p>
+<p id="demo"></p>
+<script>
+var x = 5; var y = 5; var z = 6;
+document.getElementById("demo").innerHTML = (x == y) + "<br>" + (x == z); //return true false  - Booleans are often used in conditional testing.
+</script>
+
+
+<p>Array indexes are zero-based, which means the first item is [0].</p>
+<p id="demo"></p>
+<script>
+var cars = ["Saab","Volvo","BMW"];
+document.getElementById("demo").innerHTML = cars[0];
+</script>
+
+<p id="demo"></p>
+<script>
+var person = {
+    firstName : "John",
+    lastName  : "Doe",
+    age       : 50,
+    eyeColor  : "blue"
+};
+document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old.";
+</script>
+
+
+<p>The typeof operator returns the type of a variable or an expression.</p>
+<p id="demo"></p>
+<script>
+var car; 
+var car = "";              // The value is "", the typeof is "string"  
+document.getElementById("demo").innerHTML = 
+typeof "" + "<br>" +   
+typeof "John" + "<br>" + 
+typeof "John Doe" +   // string string string
+typeof (3 + 4)  + // number
+typeof car;  // Value is undefined, type is undefined
+</script>
+             
+<script>
+var car = "Volvo"; car = undefined;
+document.getElementById("demo").innerHTML = car + "<br>" + typeof car;  //undefined undefined
+</script>
+
+<script>
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+person = null;
+document.getElementById("demo").innerHTML = typeof person;  //object - Objects can be emptied by setting the value to null.
+</script> 
+
+
+<p>Undefined and null are equal in value but different in type:</p>
+<p id="demo"></p>
+<script> // undefined object false true
+document.getElementById("demo").innerHTML = typeof undefined + "<br>" + typeof null + "<br><br>" + (null === undefined) + "<br>" + (null == undefined);
+</script> 
+
+
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+<p id="demo"></p>
+<script>
+function myFunction(p1, p2) {
+    return p1 * p2;
+}
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+
+
+
+<script>
+var x = myFunction(4, 3);
+document.getElementById("demo").innerHTML = x;
+function myFunction(a, b) {
+    return a * b;  //12
+}  
+</script>
+
+<script>
+function toCelsius(f) {
+    return (5/9) * (f-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(77);
+</script>
+
+<script>
+document.getElementById("demo").innerHTML = "The temperature is " + toCelsius(77) + " Celsius";
+function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+} 
+</script>
+
+
+<h2>JavaScript Functions</h2>
+
+<p>Outside myFunction() carName is undefined.</p>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<script>
+myFunction();
+function myFunction() {
+    var carName = "Volvo";
+    document.getElementById("demo1").innerHTML = typeof carName + " " + carName;
+}
+document.getElementById("demo2").innerHTML = typeof carName;
+</script>
+
+<script>
+// Create an object:
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+
+<!-- 
+https://www.w3schools.com/js/js_events.asp
+ -->
+
+</body>
+</html> 

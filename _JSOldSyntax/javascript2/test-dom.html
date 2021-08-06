@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test DOM</title>
+</head>
+<body>
+
+<h1>Header</h1>
+<h3>Lorem Ipsum</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+  type specimen book.[<span>0</span>]</p>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+  type specimen book.</p>
+
+<button onclick="sayHello()">Base Message</button>
+<button id="hide-element" onclick="hideElement()">Hide Element</button>
+<button onclick="changeElement()">Change Element</button>
+<button onclick="changeStyle()">Change Style</button>
+
+
+<script>
+  function sayHello() {
+    // output in console and show alert message
+    alert("Hello");
+    console.log("Hello");
+  }
+  
+  function hideElement() {
+    // hide the button
+    document.getElementById("hide-element").style.display = "none";
+  }
+  
+  function changeElement() {
+    // change the second paragraph
+    document.getElementsByTagName("p")[1].innerText = "New text...";
+  }
+  
+  // change style of element
+  function changeStyle() {
+    let h3Text = document.getElementsByTagName('h3')[0].innerText = "New text...";
+    h3Text = document.getElementsByTagName('h3')[0].style.color ="red";
+    h3Text = document.getElementsByTagName('h3')[0].style.fontSize ="12px";
+    h3Text = document.getElementsByTagName('h3')[0].style.background ="lightgray";
+    // console.log(h3Text);
+    // alert(h3Text);
+  }
+
+
+  // // create counter
+  // function plusOne() {
+  //   // convert to number with ~~
+  //   const currentCounter = ~~document.getElementsByTagName('span')[0].innerText;
+  //   const newCounter = currentCounter + 1;
+  //   document.getElementsByTagName('span')[0].innerText = currentCounter + 1;
+  // }
+  //
+  // function minusOne() {
+  //   // convert to number with Number()
+  //   const currentCounter = Number(document.getElementsByTagName('span')[0].innerText);
+  //   const newCounter = currentCounter - 1;
+  //   document.getElementsByTagName('span')[0].innerText = newCounter;
+  // }
+  
+</script>
+
+</body>
+</html>

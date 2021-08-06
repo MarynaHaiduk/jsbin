@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo2 Main</title>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<h1>Todo2 Main</h1>
+<input type="text" id="todoInput">
+<button onclick="addToList()">ADD</button>
+
+
+<p><small>Todo2: <span>0</span></small></p>
+
+<main>
+  <!--
+  * TodoList. Add Event Listener. Change status
+https://youtu.be/y8j9ULFTHzk
+* TodoList. Bug fix
+https://youtu.be/Fw6nkrfCKMs
+* TodoList. Save list in LocalStorage
+https://youtu.be/nt1g4qozoGQ
+* TodoList. Read list from LocalStorage
+https://youtu.be/CShpdf5Uz1I
+-->
+  
+    
+    <!-- Change background if done only for first -->
+    <!--    <button onclick="doneDeal()"> Done </button>-->
+    <!--    <button onclick="undoDeal()"> Cancel </button>-->
+    
+    <!-- Todo2 Vanilla list -->
+    <h3>All tasks: </h3>
+    <ol id="list" id="all-tasks">
+      <!--      <li id="list-item">First task-->
+      <!--        <button onclick="goUp()">↑</button>-->
+      <!--        <button onclick="goDown()">↓</button>-->
+      <!--        &lt;!&ndash; For field 'done' &ndash;&gt;-->
+      <!--        <button> Done </button>-->
+      <!--        &lt;!&ndash; For field 'update' &ndash;&gt;-->
+      <!--        <button> Update </button>-->
+      <!--        <input type="text"/>-->
+      <!--        <button> Save </button>-->
+      <!--        <button> Cancel </button>-->
+      <!--        <button> Delete </button>-->
+      <!--      </li>-->
+      <!--      -->
+      <!--      <li class="list-item">Second task-->
+      <!--        <input type="text"/>-->
+      <!--        <button> Cancel </button>-->
+      <!--      </li>-->
+    </ol>
+    
+    <button onclick="DeleteAllTasks()">DELETE ALL</button>
+  
+  </div>
+  
+  <!-- Counter -->
+  <!--  <div class="container">-->
+  <!--&lt;!&ndash;    <button onclick="plusOne()">Plus task</button>&ndash;&gt;-->
+  <!--&lt;!&ndash;    <button onclick="minusOne()">Minus task</button>&ndash;&gt;-->
+  <!--    -->
+  <!--    <h3>Completed: <span id="counter">0</span></h3>-->
+  <!--    <ul>-->
+  <!--      <li></li>-->
+  <!--    </ul>-->
+  <!--    <button onclick="plusComplited()">Plus Completed</button>-->
+  <!--    <button onclick="minusComplited()">Minus Completed</button>-->
+  <!--    <button onclick="resetComplited()">Reset Completed</button>-->
+  <!--  </div>-->
+  
+  <!--  Add to Todo2 Vanilla
+    - video pasv js about js DOM
+    - onmouseover change size of list item
+    
+    - on update list item show input, save, cancel
+    - hide input, save, cancel if we don't update
+    
+    - plusOne, minusOne - change counter from list count items
+    
+    - done -  cross out, show in completed
+    - delete - remove from list
+    - user input - enter using enter
+    - goUp, goDown - change functions
+    
+    - store in json
+    - local storage
+  -->
+</main>
+
+<script>
+  
+  // // generation auto
+  // function render() {
+  //   list.forEach(el => {
+  //     const listItem = document.createElement('li');
+  //     const listItemText = document.createTextNode(el.title);
+  //     listItem.appendChild(listItemText);
+  //
+  //     const buttonItem = document.createElement('button');
+  //     const buttonItemText = document.createTextNode('Done');
+  //     buttonItem.appendChild(buttonItemText);
+  //     listItem.appendChild(buttonItem);
+  //
+  //     listElement.appendChild(listItem);
+  //   });
+  // }
+  //
+  // render();
+  //
+  
+  // const listItem = document.getElementById('list');
+  // let countAllTasks = 0;
+  
+  
+  // function addToAllTasks() {
+  //
+  //   // Create li element
+  //   let userInput = document.getElementById("add-task").value;
+  //   let li = document.createElement("li");
+  //   let task = document.createTextNode(userInput);
+  //
+  //   // Create  new line
+  //   let breakBtn = document.createElement("br");
+  //
+  //   // Create update button
+  //   let updateBtn = document.createElement('button');
+  //   updateBtn.innerText = 'Update';
+  //
+  //   // Create delete button
+  //   let delBtn = document.createElement('button');
+  //   delBtn.innerText = 'Delete';
+  //
+  //   // Add tasks to list
+  //   li.appendChild(task);
+  //   li.appendChild(updateBtn);
+  //   updateBtn.setAttribute("id","update-btn");
+  //   li.appendChild(delBtn);
+  //   delBtn.setAttribute("id","del-btn");
+  //
+  //
+  //   // Delete task from list
+  //   delBtn.addEventListener('click', function(e) {
+  //     li.parentNode.removeChild(li);
+  //     // countAllTasks--;
+  //   });
+  //
+  //   // Add task to array
+  //   // todo.push(userInput);
+  //
+  //   if (userInput != '') {
+  //     document.getElementById("all-tasks").appendChild(li);
+  //     countAllTasks++;
+  //   }
+  //   document.getElementById("add-task").value = "";
+  //
+  //   document.getElementById("count-todo").innerHTML = "All tasks: " + countAllTasks;
+  // }
+  //
+  // // Clear TodoList
+  // // function removeAllChildNodes(parent) {
+  // //     parent.removeChild(ol);
+  // // }
+  // //
+  // // const container = document.querySelector('#all-tasks');
+  // // removeAllChildNodes(container);
+  
+</script>
+
+<script src="todo.js"></script>
+
+</body>
+</html>

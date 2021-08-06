@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h1>JS Basic</h1>
+
+<!-- change element -->
+<div>
+  <h2 id="count-el">0</h2>
+  <script>
+    document.getElementById("count-el").innerText = 5
+  </script>
+</div>
+
+
+<button onclick="increment()">Increment</button>
+<script>
+  function increment() {
+    console.log("yes")
+  }
+</script>
+
+
+<!-- counter -->
+<p>1</p>
+<button onclick="counter()">Count</button>
+<script>
+  let countEl = document.querySelector("p");
+  console.log(countEl);
+  let count = 0;
+  
+  function counter() {
+    count += 1
+    countEl.innerText = count;
+    
+    if (count % 10 === 0) {
+      alert(`Count is now ${count}`);
+    }
+  }
+</script>
+
+
+
+<button>Change button</button>
+<!--<button onclick="hello2()">Click it</button>-->
+<!--<button onclick="change1()">Change Header 1</button>-->
+<!--<button onclick="change2()">Change Header 2</button>-->
+
+<script>
+  alert("Hello 1");
+  
+  // function hello2() {
+  //   alert("Hello 2");
+  // }
+  //
+  // hello2();
+  
+  // document.querySelector("button").onclick = counter;
+  
+  // function change1() {
+  //   if(document.querySelector("h1").innerHTML === "JavaScript") {
+  //     document.querySelector("h1").innerHTML = "JS Basic";
+  //   } else {
+  //     document.querySelector("h1").innerHTML = "JavaScript";
+  //   }
+  // }
+  
+  // function change2() {
+  //   let heading = document.querySelector("h1")
+  //   if(heading.innerHTML === "JavaScript") {
+  //     heading.innerHTML = "JS Basic";
+  //   } else {
+  //     heading.innerHTML = "JavaScript";
+  //   }
+  // }
+
+</script>
+
+</body>
+</html>

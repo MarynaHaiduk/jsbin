@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Javascript</title>
+</head>
+
+<body id='body'>
+	<h1 id="heading">Learning Javascript</h1>
+	<!--<button onclick="doClick()">Click Me</button>-->
+	<!--<button onclick="this.innerHTML ='You clicked'">Click Me</button>-->
+	<!--<button onclick="changeText(this)">Click Me</button>-->
+	<!--<button onclick="changeTextbyId(this)">Click Me</button>-->
+
+	<!--<h1 id="time"></h1>-->
+	<!--<button onclick="showDate()">Click Me</button>
+	-->
+	<button onmouseout="clearDate()" onmouseover="showDate()">Show Date</button>
+	<h1 id="time"></h1>
+
+	<form action="/action_page.php" target="_blank" method="POST" name="myForm" onsubmit="return validateForm()">
+	<!-- Method post dosn't show in url information!!!-->
+	<div>
+		<label>First Name: </label>
+		<input type="text" name="firstName" id="firstName" />
+	</div>
+	<br />
+
+	<div>
+		<label>Last Name: </label>
+		<input type="text" name="lastName" />
+	</div>
+	<br />
+	<div>
+		<label>Background</label>
+		<select name="background" id='background' onchange="changeBackground(this)">
+			<option value="red">Red</option>
+			<option value="blue">Blue</option>
+			<option value="green">Green</option>
+		</select>
+	</div>
+	<br />
+	 <input type="submit" value="Submit">
+	</form>
+
+	<script>
+	//VARIABLES
+	//in variables only letters, numbers, underscores, dollar signs and begin with a letter and Case sensitive!!!
+	//var number1 = 35;
+	//var number2 = 5;
+	//alert(number1);
+	//alert('It works');
+	//alert(number1+number2);
+	//alert("My favourite number is " + number1)
+
+
+  //LOOPS
+	//console.log(123) // вывести 123 сразу
+
+	//for(var i=0; i <10; i++){
+	//	console.log(i) 	}
+
+	//var i = 0;
+	//while (i <10){
+	//	console.log(i);
+	//	i++;		}
+
+	//var numbers = [33,54,76,2,6];
+	//numbers.forEach(function(number){
+	//console.log(number);
+	//});
+	// The same as
+	//for(var i=0; i<numbers.length; i++){
+	//console.log(numbers[i]);}
+
+	/*var fruit = 'apple';
+	switch(fruit){
+		case'banana':
+			alert('I hate bananas');
+			break;
+		case'apple':
+			alert('I hate apples');
+			break;
+		case'orange':
+			alert('I hate oranges');
+			break;
+		default:
+			alert('I love other fruits');
+			break;
+	} */
+
+
+	//OBJECTS
+	/*var person = {
+		firstName: 'Brad',
+		lastName: 'Traversy',
+		age: 34,
+		children: ['Brianna', 'Nicolas'],
+		address: {street: '555', city: 'Boston', state: 'MA'},
+		fullName: function() {
+		return this.firstName + " " + this.lastName}
+	}
+	//console.log(person.firstName);
+	//console.log(person.children[0]);
+	//console.log(person.address.state);
+	//console.log(person.fullName()) */
+
+
+	//OBJECT CONSTRUCTOR
+	/* var apple = new Object();
+	apple.color = 'red';
+	apple.shape = 'round';
+
+	apple.describe = function() {
+	return "An apple is the color " + this.color + " and the shape is " + this.shape;
+	}
+	console.log(apple.describe()); */
+
+
+
+	//OBJECT PATTERN
+	/*
+	function Fruit(name, color, shape){
+		this.name = name;
+		this.color = color;
+		this.shape = shape;
+		this.describe = function() {
+			return 'A ' + this.name + ' is the color ' + this.color +
+			' and is the shape ' + this.shape;
+		}
+	}
+		//var apple = new Fruit('apple', 'red', 'round');
+		var melon = new Fruit('melon', 'green', 'round');
+		//console.log(apple);
+		console.log(melon);
+		//console.log(melon.describe()); */
+
+
+	//ARRAY OF OBJECTS
+	/* var users = [
+		{
+			name: "one",
+			age: 3
+		},
+		{
+			name: "two",
+			age: 35
+		}
+		];
+	console.log(users[0].name); */
+
+
+	//EVENTS
+	function doClick(){
+		alert('You Clicked!');
+	}
+	function changeText(id){
+		id.innerHTML = "You clicked!";
+	}
+	function changeTextbyId(){
+		var heading = document.getElementById('heading');
+		heading.innerHTML = "You clicked!";
+	}
+	function showDate(){
+		var time = document.getElementById('time');
+		time.innerHTML = Date();
+		}
+	function clearDate(){
+		var time = document.getElementById('time');
+		time.innerHTML = '';
+		}
+	function changeBackground(x){
+		console.log(x.value);
+		var body = document.getElementById('body');
+		//body.style.backgroundColor = x.value;
+		heading.style.color = x.value;
+		}
+	function validateForm(){
+		var firstName = document.forms["myForm"]["firstName"].value;
+
+		if(firstName == null || firstName == ""){
+			alert("First name is required");
+			return false;
+			}
+	}
+
+	</script>
+</body>
+</html>

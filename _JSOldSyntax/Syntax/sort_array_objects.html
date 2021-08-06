@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p id="demo"></p>
+	<button onclick="sorting_by_name(cars)">Sort</button>
+
+<script>
+	var cars = [
+	  {type:"Volvo", year:2016},
+	  {type:"Saab", year:2001},
+	  {type:"BMW", year:2010}
+	];
+
+	displayCars();
+
+	function sorting_by_year(){
+		cars.sort(function(a, b) {return a.year - b.year;});
+		displayCars();
+
+	}
+
+	function displayCars() {
+	  document.getElementById("demo").innerHTML =
+	  cars[0].type + " " + cars[0].year + "<br>" +
+	  cars[1].type + " " + cars[1].year + "<br>" +
+	  cars[2].type + " " + cars[2].year;
+	}
+
+	function sorting_by_name() {
+	  cars.sort(function(a, b){
+		var x = a.type.toLowerCase();
+		var y = b.type.toLowerCase();
+		if (x < y) {return -1;}
+		if (x > y) {return 1;}
+		return 0;
+	  });
+	  displayCars();
+}
+</script>
+
+</body>
+</html>

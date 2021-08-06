@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>Counter</title>
+</head>
+<body>
+
+<h2>Counter</h2>
+<p id='counter'>0</p>
+
+<button type='button' onclick='plusOne()'>Plus</button>
+<button type='button' onclick='minusOne()'>Minus</button>
+
+
+<script>
+  
+  function plusOne() {
+    let current = Number(document.getElementById('counter').innerText);
+    document.getElementById('counter').innerText = String(current + 1);
+  }
+  
+  function minusOne() {
+    let current = Number(document.getElementById('counter').innerText);
+    document.getElementById('counter').innerText = String(current - 1);
+  }
+
+</script>
+</body>
+</html>
