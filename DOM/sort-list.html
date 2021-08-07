@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>Sort List</title>
+</head>
+<body>
+
+
+<div>
+  <ol id='list'>
+  </ol>
+</div>
+
+
+<button onclick='sortByName(list)'>sort by name</button>
+<button onclick='sortByYear(list)'>sort by year</button>
+
+
+<script>
+  
+  const list = [
+    { software: 'HTML', created: 1993 },
+    { software: 'CSS', created: 1996 },
+    { software: 'React', created: 2011 },
+    { software: 'JS', created: 1995 },
+  ];
+
+  
+  function displayList() {
+    list.forEach(item => {
+        const li = document.createElement('li');
+        const listItem = document.createTextNode(
+          item.software + ", " + item.created);
+        li.appendChild(listItem);
+        document.getElementById('list').appendChild(li);
+      });
+
+  }
+  displayList();
+  
+  
+  function sortByYear() {
+    document.getElementById('list').innerHTML = null;
+    list.sort(function(a, b) {
+      return a.created - b.created;
+    });
+    displayList();
+  }
+  
+  
+  function sortByName() {
+    document.getElementById('list').innerHTML = null;
+    
+    list.sort(function(a, b) {
+      let x = a.software.toLowerCase();
+      let y = b.software.toLowerCase();
+      
+      if (x < y) {
+        return -1;
+      }
+      if (x > y) {
+        return 1;
+      }
+      return 0;
+    });
+    
+    displayList();
+  }
+  
+</script>
+</body>
+</html>
