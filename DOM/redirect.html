@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>Redirect</title>
+  
+  <script>
+    function redirect() {
+      window.location = 'https://www.google.com';
+    }
+    document.write("You will be redirected to 'google' page automatically in 10 sec");
+    setTimeout('redirect()', 10000);
+  </script>
+
+</head>
+
+<body>
+<p>or click the button to be redirected now.</p>
+
+<form>
+  <input type='button' value='redirect' onclick='redirect()' />
+</form>
+
+</body>
+</html>

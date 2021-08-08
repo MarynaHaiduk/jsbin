@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>JS Output</title>
+</head>
+<body>
+
+
+<button type='button' onClick='document.write(5+5)'>delete all</button>
+
+<!-- method in the browser to print the content of the current window -->
+<button onclick='window.print()'>print</button>
+
+<div id='content'></div>
+
+
+<script>
+  
+  /*
+  * This is a multi-line comment in JavaScript.
+  */
+  
+  
+  // used to give a warning message to the users
+  alert('This is an alert message.');
+  
+  
+  //  used to take user's consent on any option
+  confirm('Are you finished?'); // returns true, if pressed OK, else false
+  
+  
+  // used to pop-up a text box to get user input
+  prompt('text', 'Enter your text here.'); // returns entered value, or null if canceled
+  prompt('text', ''); // for IE without value, else IE "undefined"
+  
+  
+  console.log('This is in console.log message.');
+  console.error('This is an error message.');
+  console.warn('This is a warning message.');
+  
+  
+  document.getElementById('content').innerHTML = 10;
+  
+  
+  // Writes a string into HTML document. Should only be used for testing.
+  document.write('This is document.write message: ', 5 + 5);
+
+</script>
+</body>
+</html>
